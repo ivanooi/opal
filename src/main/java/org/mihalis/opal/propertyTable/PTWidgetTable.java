@@ -25,6 +25,7 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.ScrollBar;
@@ -42,7 +43,7 @@ import org.mihalis.opal.utils.StringUtil;
 class PTWidgetTable extends AbstractPTWidget {
 
 	private Table table;
-
+	private Font if_font; 
 	/**
 	 * @see org.mihalis.opal.propertyTable.AbstractPTWidget#buildWidget(org.eclipse.swt.widgets.Composite)
 	 */
@@ -53,6 +54,9 @@ class PTWidgetTable extends AbstractPTWidget {
 		this.table.setHeaderVisible(true);
 		this.table.setLayoutData(new GridData(GridData.FILL, GridData.FILL, true, true, 3, 1));
 
+		if_font = getParentPropertyTable().getFont();
+		if( if_font != null )this.table.setFont( if_font );
+		
 		final TableColumn propertyColumn = new TableColumn(this.table, SWT.NONE);
 		propertyColumn.setText(ResourceManager.getLabel(ResourceManager.PROPERTY));
 
