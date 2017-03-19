@@ -76,6 +76,8 @@ public class PTComboEditor extends PTEditor {
 
 		final CCombo combo = new CCombo(widget.getWidget(), SWT.BORDER | (this.readOnly ? SWT.READ_ONLY : SWT.NONE));
 
+        	if( widget.getFont() != null )combo.setFont( widget.getFont());
+		
 		for (int i = 0; i < this.data.size(); i++) {
 			final Object datum = this.data.get(i);
 			combo.add(datum.toString());
