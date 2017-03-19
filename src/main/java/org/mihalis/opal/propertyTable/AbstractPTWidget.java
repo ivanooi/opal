@@ -34,6 +34,11 @@ public abstract class AbstractPTWidget implements PTWidget {
 
 	private PropertyTable parentPropertyTable;
 	protected StyledText descriptionLabel;
+	protected org.eclipse.swt.graphics.Font if_font ;
+	
+	public org.eclipse.swt.graphics.Font getFont(){
+        	return if_font ;
+    	}
 
 	/**
 	 * @see org.mihalis.opal.propertyTable.PTWidget#refillData()
