@@ -192,4 +192,13 @@ class PTWidgetTable extends AbstractPTWidget {
 		return this.table;
 	}
 
+	Font if_font ;
+	
+	public void setFont( Font font ){
+        	if_font = font ;
+    	}
+    	public Font getFont(){
+        	return if_font ;
+    	}
+	
 }
