@@ -49,6 +49,8 @@ public class PTCheckboxEditor extends PTEditor {
 
 		final Button button = new Button(widget.getWidget(), SWT.CHECK);
 
+		if( widget.getFont() != null )button.setFont( widget.getFont());
+		
 		if (property.getValue() == null) {
 			button.setSelection(false);
 		} else {
