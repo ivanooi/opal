@@ -54,6 +54,8 @@ public class PTDateEditor extends PTEditor {
 		final Date date = (Date) property.getValue();
 		final Calendar c = Calendar.getInstance();
 
+                if( widget.getFont() != null )dateEditor.setFont( widget.getFont());
+		
 		if (date != null) {
 			c.setTime(date);
 			dateEditor.setDate(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
