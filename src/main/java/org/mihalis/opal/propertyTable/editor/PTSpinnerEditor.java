@@ -60,6 +60,8 @@ public class PTSpinnerEditor extends PTEditor {
 
 		final Spinner spinner = new Spinner(widget.getWidget(), SWT.HORIZONTAL);
 
+                if( widget.getFont() != null )spinner.setFont( widget.getFont());
+		
 		spinner.setMinimum(this.min);
 		spinner.setMaximum(this.max);
 		final Integer originalValue = (Integer) property.getValue();
