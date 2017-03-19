@@ -54,6 +54,10 @@ public abstract class PTBaseTextEditor extends PTEditor {
 
 		this.text = new Text(widget.getWidget(), getStyle());
 
+		if( widget.getFont() != null ){
+		    this.text.setFont( widget.getFont());
+		}
+		
 		addVerifyListeners();
 
 		this.text.setText(StringUtil.safeToString(property.getValue()));
