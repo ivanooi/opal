@@ -59,4 +59,5 @@ public interface PTWidget {
 	 */
 	void updateDescriptionPanel(final Object selection);
 
+	public org.eclipse.swt.graphics.Font getFont();
 }
